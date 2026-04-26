@@ -1304,6 +1304,10 @@ p{margin-top:0}
   transition: opacity 240ms steps(2, end), visibility 240ms linear;
 }
 
+.hero-showreel.is-glitching-transition .editorial-slide.is-active{
+  animation: heroGlitchFrame 260ms steps(2, end) 1;
+}
+
 .hero-showreel.is-glitching-transition .editorial-slide.is-active img{
   animation: heroGlitchJolt 260ms steps(2, end) 1;
 }
@@ -1405,6 +1409,14 @@ p{margin-top:0}
   100%{
     transform: scale(1.05) translate3d(0,-0.8%,0);
   }
+}
+
+@keyframes heroGlitchFrame{
+  0%{ transform:translate3d(0,0,0); }
+  22%{ transform:translate3d(-10px,0,0); }
+  46%{ transform:translate3d(8px,0,0); }
+  74%{ transform:translate3d(-4px,0,0); }
+  100%{ transform:translate3d(0,0,0); }
 }
 
 @keyframes heroGlitchJolt{
